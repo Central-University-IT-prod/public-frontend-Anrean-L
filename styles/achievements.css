@@ -1,0 +1,45 @@
+.container {
+    padding-top: 20px;
+}
+
+.achievements {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.achievements__item {
+    opacity: 0.6;
+}
+
+.achievements__item img {
+    width: 100%;
+    border-radius: 10px;
+    filter: grayscale(1);
+}
+
+.achievements__item--gained img {
+    filter: none;
+}
+
+.achievements__item--gained {
+    opacity: 1;
+}
+
+.achievements__desc {
+    text-align: center;
+}
+
+.heading-text {
+    font-size: 1.1rem;
+}
+
+@media (max-width: 445px) {
+    .achievements {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .heading-text {
+        font-size: 1.3rem;
+    }
+}

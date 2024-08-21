@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+a:focus, a:active {
+    outline: none;
+}
+
+a, a:visited {
+    text-decoration-color: rgba(0, 0, 0, 0);
+}
+
+a:hover {
+    text-decoration-color: inherit;
+}
+
+a {
+    color: inherit;
+    transition: text-decoration-color .3s;
+}
+
+.container {
+    max-width: 700px;
+    box-sizing: content-box;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+body {
+    margin: 81px 0;
+    font-size: 1rem;
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-weight: 400;
+    background-color: var(--light-color);
+    color: var(--border-dark-color);
+}
+
+dialog {
+    background-color: var(--light-color);
+    border-radius: 15px;
+    border: 3px solid var(--dialogs-border-color);
+    color: inherit;
+}
+
+button {
+    color: inherit;
+}
+
+.header {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    font-weight: 600;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 0 15px;
+    z-index: 100;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.header__list {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.header__list--mobile {
+    display: none;
+}
+
+.header__list-item svg {
+    width: 30px;
+    height: 30px;
+}
+
+.header__list-item svg g,
+.header__list-item svg path {
+    fill: var(--light-color);
+}
+
+@media (max-width: 600px) {
+    .header {
+        top: auto;
+        bottom: 0;
+    }
+
+    .header .container {
+        padding: 0;
+        justify-content: center;
+    }
+
+    body {
+        margin: 0 0 81px;
+    }
+
+    .header__list {
+        display: none;
+    }
+
+    .header__list--mobile {
+        display: flex;
+        padding: 0;
+    }
+
+    .header__icon {
+        display: none;
+    }
+}

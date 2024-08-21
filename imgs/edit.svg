@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="512" height="512" version="1.1" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <clipPath id="clipPath5">
+   <path class="powerclip" d="m80.5 81.391h352v357.34h-352zm65.562 41.516c-11.842 0-21.375 9.5332-21.375 21.375v228.89c0 11.842 9.5332 21.375 21.375 21.375h222.66c11.842 0 21.375-9.5332 21.375-21.375v-228.89c0-11.842-9.5332-21.375-21.375-21.375z" fill="#fff"/>
+  </clipPath>
+ </defs>
+ <g fill="#f2f2f2">
+  <path d="m128.25 86.391c-23.683 0-42.75 19.067-42.75 42.75v261.84c0 23.683 19.067 42.75 42.75 42.75h256.5c23.683 0 42.75-19.067 42.75-42.75v-225.53l-41.859 43.109-85.621-83.139 37.904-39.035h-209.67z" clip-path="url(#clipPath5)"/>
+  <g>
+   <rect transform="matrix(.69804 -.71606 .73298 .68025 0 0)" x="-31.991" y="330.42" width="242.94" height="63.03" stroke-width=".99616"/>
+   <path d="m213.96 254.97 43.803 41.761s-64.17 36.754-70.103 28.819c-5.2662-7.0434 26.3-70.58 26.3-70.58z"/>
+   <rect transform="rotate(43.583)" x="333.12" y="-268.94" width="62.814" height="48.085" ry="8.6173" stroke-width="2.7515"/>
+   <rect transform="rotate(43.472)" x="333.54" y="-239.26" width="23.301" height="19.05"/>
+   <rect transform="rotate(43.982)" x="370.21" y="-241.16" width="24.089" height="17.791"/>
+  </g>
+ </g>
+</svg>

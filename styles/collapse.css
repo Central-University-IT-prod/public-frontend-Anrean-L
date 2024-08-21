@@ -1,0 +1,8 @@
+.toggle-element {
+    transition: height .25s ease;
+    overflow: hidden;
+}
+
+.toggle-element:not(.toggle-element-active) {
+    display: none;
+}

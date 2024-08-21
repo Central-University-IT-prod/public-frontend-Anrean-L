@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Вырабатывайте полезные привычки вместе с Habits! Приложение поможет вам стать лучше, а процесс саморазвития будет проходить в игровой форме">
+    <meta name="theme-color" content="#f0f8ff" />
+    <title>Трекер привычек</title>
+    <script src="scripts/theme.js" async></script>
+    <script src="scripts/loader.js" async></script>
+    <link rel="icon" href="imgs/icons/icon120.svg" type="image/x-icon">
+    <link rel="stylesheet" href="styles/loader.css">
+    <link rel="stylesheet" href="styles/themes.css">
+    <link rel="stylesheet" href="styles/collapse.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/dialogs.css">
+    <link rel="manifest" href="manifest.webmanifest">
+</head>
+
+<body>
+    <div id="container-loader" class="container-loader">
+        <div class="lds-ripple">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <dialog class="add-dialog">
+        <div class="add-dialog__heading">
+            <h2>Добавить привычку</h2>
+            <button class="add-dialog__close-btn" type="button" onclick="addDialog.close();createForm.reset()"></button>
+        </div>
+        <div class="add-dialog__library">
+            <input class="add-dialog__create-btn dialog__btn" type="button" value="или создать свою!"
+                onclick="addDialogToggle()">
+            <div class="add-dialog__lib-content">
+                <button onclick="addLibraryHabit(this)"
+                    value='{"title":"Читать книги","category":"Саморазвитие","period":"daily"}'>Читать
+                    книги</button>
+                <button onclick="addLibraryHabit(this)"
+                    value='{"title":"Полить цветы","category":"Уход за домом","period":"daily"}'>Полить
+                    цветы</button>
+                <button onclick="addLibraryHabit(this)"
+                    value='{"title":"Сделать уборку","category":"Уход за домом","period":"daily"}'>Сделать
+                    уборку</button>
+                <button onclick="addLibraryHabit(this)"
+                    value='{"title":"Сделать зарядку утром","category":"Физическая активность","period":"daily"}'>Сделать
+                    зарядку утром</button>
+                <button onclick="addLibraryHabit(this)"
+                    value='{"title":"Выйти на пробежку","category":"Физическая активность","period":"daily"}'>Выйти
+                    на пробежку</button>
+                <button onclick="addLibraryHabit(this)"
+                    value='{"title":"Выгуливать собаку","category":"Уход за животными","period":"daily"}'>Выгуливать
+                    собаку</button>
+                <button onclick="addLibraryHabit(this)"
+                    value='{"title":"Проверить почту","category":"Социальные связи","period":"daily"}'>Проверить
+                    почту</button>
+                <button onclick="addLibraryHabit(this)"
+                    value='{"title":"Учить 10 слов на иностранном языке","category":"Языки","period":"daily","targetValue": 10}'>Учить
+                    10 слов на иностранном языке</button>
+                <button onclick="addLibraryHabit(this)"
+                    value='{"title":"Выполнить домашнее задание","category":"Саморазвитие","period":"daily"}'>Выполнить
+                    домашнее задание</button>
+                <button onclick="addLibraryHabit(this)"
+                    value='{"title":"Пройти 10 000 шагов в день","category":"Физическая активность","period":"daily","targetValue": 10000}'>Пройти
+                    10 000 шагов в день</button>
+            </div>
+        </div>
+        <div class="add-dialog__new add-dialog__content--closed">
+            <input class="add-dialog__back-btn dialog__btn" type="button" value="Добавить привычку из библиотеки"
+                onclick="addDialogToggle()">
+            <form class="add-dialog__form" id="createForm" name="createForm">
+                <input class="add-dialog__input" placeholder="Название привычки" type="text" name="title">
+                <select class="add-dialog__input" name="category" id="pet-select" required>
+                    <option value="">Выберите категорию</option>
+                    <option value="Саморазвитие">Саморазвитие</option>
+                    <option value="Физическая активность">Физическая активность</option>
+                    <option value="Уход за домом">Уход за домом</option>
+                    <option value="Финансовая грамотность">Финансовая грамотность</option>
+                    <option value="Социальные связи">Социальные связи</option>
+                    <option value="Языки">Языки</option>
+                    <option value="Уход за животными">Уход за животными</option>
+                    <option value="Здоровье">Здоровье</option>
+                    <option value="Другое">Другое</option>
+                </select>
+
+                <div class="add-dialog__radio-row">
+                    <label class="add-dialog__period">
+                        Ежедневно<input type="radio" value="daily" name="period" required>
+                    </label>
+                    <label class="add-dialog__period">
+                        Еженедельно<input type="radio" value="weekly" name="period">
+                    </label>
+                    <label class="add-dialog__period">
+                        Ежемесячно<input type="radio" value="monthly" name="period">
+                    </label>
+                </div>
+
+                <input class="add-dialog__input" type="number" placeholder="Число (необязательно)" name="targetValue">
+                <input class="add-dialog__apply dialog__btn" type="submit" value="Добавить" form="createForm">
+            </form>
+        </div>
+    </dialog>
+
+    <dialog class="delete-dialog"></dialog>
+
+    <dialog class="ach">
+        Вы получили новое достижение!
+        <a href="achievements.html"><img class="ach__img" alt="значок достижения"></a>
+        <input class="ach__close" type="button" value="Закрыть" onclick="this.parentNode.close()">
+    </dialog>
+
+    <header class="header">
+        <div class="container">
+            <div class="header__icon">
+                <a href="/">Habits</a>
+            </div>
+            <nav>
+                <ul class="header__list">
+                    <li class="header__list-item"><a href="profile.html">Профиль</a></li>
+                    <li class="header__list-item"><a href="market.html">Магазин</a></li>
+                    <li class="header__list-item"><a href="achievements.html">Достижения</a></li>
+                </ul>
+                <ul class="header__list header__list--mobile">
+                    <li class="header__list-item"><a href="/" aria-label="Перейти на главную страницу">
+                            <svg width="48" height="48" version="1.1" viewBox="0 0 48 48"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="m20.415 11.152-9.9318 25.826 4.143 0.11049 4.3941-10.662c3.2613-1.9701 6.4484-1.4705 8.8753-1.4294l-4.2321 11.955 4.2317 0.06802 9.2697-25.877-4.5846 0.0625-3.8335 10.569c-2.1572-0.0051-5.5821-0.75496-8.6333 1.0717l4.5729-11.693z"
+                                    fill="#f2f2f2" stroke-width="1.1154" />
+                            </svg>
+                        </a></li>
+                    <li class="header__list-item"><a href="profile.html" aria-label="Перейти на страницу профиля">
+                            <svg width="512" height="512" version="1.1" viewBox="0 0 512 512"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g fill="#f2f2f2">
+                                    <path
+                                        d="m257.34 244.92a168.77 168.77 0 0 0-168.77 168.77 168.77 168.77 0 0 0 0.03125 0.44531h49.48a118.01 118.01 0 0 1 103.79-116.55 110.44 110.44 0 0 1 17.693-1.459 110.44 110.44 0 0 1 90.223 46.811 118.01 118.01 0 0 1 24.262 71.197h50.281v23.859a168.77 168.77 0 0 0 1.7812-24.305 168.77 168.77 0 0 0-168.77-168.77z" />
+                                    <path
+                                        d="m251.02 63.414a86.985 86.985 0 0 0-86.984 86.984 86.985 86.985 0 0 0 86.984 86.984 86.985 86.985 0 0 0 86.986-86.984 86.985 86.985 0 0 0-86.986-86.984zm1.2012 39.238a47.547 47.547 0 0 1 47.549 47.547 47.547 47.547 0 0 1-47.549 47.547 47.547 47.547 0 0 1-47.547-47.547 47.547 47.547 0 0 1 47.547-47.547z"
+                                        stroke-width="1.1357" />
+                                </g>
+                            </svg>
+                        </a></li>
+                    <li class="header__list-item"><a href="market.html" aria-label="Перейти на страницу магазина">
+                            <svg width="512" height="512" version="1.1" viewBox="0 0 512 512"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g fill="#f2f2f2">
+                                    <path transform="translate(0 -16.374)"
+                                        d="m53.111 146.16 49.879-0.0974a2.952 2.952 35.37 0 1 2.7945 1.9837l60.795 175.09a22.572 22.572 35.194 0 0 21.506 15.167l197.62-1.6002a8.0847 8.0847 142.18 0 0 7.7501-6.0156l4.7557-17.966a5.0559 5.0559 52.413 0 0-4.8876-6.3497h-190.35a5.1883 5.1883 33.787 0 1-4.796-3.209l-10.254-24.846 208.17-1.4749a15.668 15.668 142.58 0 0 14.982-11.461l26.226-94.094a10.042 10.042 52.744 0 0-9.6888-12.738l-279.77 0.42517-15.864-44.669a4.478 4.478 35.224 0 0-4.2198-2.9794l-73.656 1e-5a6.0104 6.0104 135 0 0-6.0104 6.0104l1e-6 23.818a5.0071 5.0071 44.944 0 0 5.0169 5.0071z" />
+                                    <circle cx="355.36" cy="363.92" r="33.844" />
+                                    <circle cx="206.5" cy="363.81" r="33.844" />
+                                </g>
+                            </svg>
+                        </a></li>
+                    <li class="header__list-item"><a href="achievements.html"
+                            aria-label="Перейти на страницу достижений">
+                            <svg width="512" height="512" version="1.1" viewBox="0 0 512 512"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g fill="#f2f2f2">
+                                    <path
+                                        d="m258.56 45.238a140.75 140.75 0 0 0-140.71 140.78 140.75 140.75 0 0 0 140.77 140.72 140.75 140.75 0 0 0 140.74-140.75v-0.0586a140.75 140.75 0 0 0-140.8-140.69zm1.4726 42.043a101.53 101.53 0 0 1 101.56 101.49v0.043a101.53 101.53 0 0 1-101.52 101.53 101.53 101.53 0 0 1-101.54-101.51 101.53 101.53 0 0 1 101.5-101.55z" />
+                                    <path transform="translate(-2.6719 -24.047)"
+                                        d="m175.08 317.84-2.7516 146.94a16.79 16.79 44.344 0 0 17.486 17.09l5.0118-0.20878a11.989 11.989 159.33 0 0 7.0389-2.6558l55.217-44.648a8.4575 8.4575 0.87494 0 1 10.834 0.16545l49.302 42.418a17.19 17.19 21.618 0 0 10.454 4.1426l3.4054 0.15031a16.068 16.068 136.33 0 0 16.777-16.017l0.33202-150.83-26.287 9.7521 1.8405 117.22a2.8498 2.8498 153.54 0 1-4.6031 2.291l-48.702-38.022a11.834 11.834 0.8028 0 0-14.301-0.20039l-49.865 36.729a2.547 2.547 27.11 0 1-4.0574-2.0772l1.1973-115.37z" />
+                                    <path transform="translate(62.344 46.312)"
+                                        d="m236.91 196.83-39.564-21.365-40.03 20.48 8.0937-44.23-31.847-31.742 44.566-5.9703 20.347-40.097 19.45 40.54 44.422 6.9605-32.546 31.026z" />
+                                </g>
+                            </svg>
+                        </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="main__container container">
+            <div class="actions">
+                <div class="actions__wrapper">
+                    <input class="actions__add-habit" type="button" onclick="addDialog.showModal();"
+                        value="Добавить привычку">
+                </div>
+                <div class="actions__wrapper">
+                    <input class="actions__date-input" type="date" name="now" aria-label="Установка текущей даты">
+                    <input class="actions__submit" type="button" name="apply-time" value="Применить"
+                        onclick="changeTime()">
+                </div>
+                <div class="actions__wrapper">
+                    <label class="actions__file">
+                        <span>Выберите файл</span>
+                        <input type="file" name="file" accept=".json">
+                    </label>
+                    <input class="actions__submit" type="button" name="apply-file" value="Применить"
+                        onclick="applyFile()">
+                </div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-bar__active"></div>
+                <span>Прогресс выполнения</span>
+            </div>
+            <section class="habits-list">
+            </section>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
+    <script src="scripts/progress.js" async></script>
+    <script src="scripts/index.js" async></script>
+    <script src="scripts/collapse.js" async></script>
+</body>
+
+</html>

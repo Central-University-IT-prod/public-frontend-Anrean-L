@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f0f8ff" />
+    <title>Habits. Достижения</title>
+    <script src="scripts/loader.js" async></script>
+    <script src="scripts/theme.js" async></script>
+    <link rel="stylesheet" href="styles/loader.css">
+    <link rel="icon" href="imgs/icons/icon120.svg" type="image/x-icon">
+    <link rel="stylesheet" href="styles/themes.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/achievements.css">
+    <link rel="manifest" href="manifest.webmanifest">
+    <script src="scripts/achievements.js" defer></script>
+</head>
+
+<body>
+    <div id="container-loader" class="container-loader">
+        <div class="lds-ripple">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <header class="header">
+        <div class="container">
+            <div class="header__icon">
+                <a href="/">Habits</a>
+            </div>
+            <nav>
+                <ul class="header__list">
+                    <li class="header__list-item"><a href="profile.html">Профиль</a></li>
+                    <li class="header__list-item"><a href="market.html">Магазин</a></li>
+                    <li class="header__list-item"><a href="achievements.html">Достижения</a></li>
+                </ul>
+                <ul class="header__list header__list--mobile">
+                    <li class="header__list-item"><a href="/" aria-label="Перейти на главную страницу">
+                            <svg width="48" height="48" version="1.1" viewBox="0 0 48 48"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="m20.415 11.152-9.9318 25.826 4.143 0.11049 4.3941-10.662c3.2613-1.9701 6.4484-1.4705 8.8753-1.4294l-4.2321 11.955 4.2317 0.06802 9.2697-25.877-4.5846 0.0625-3.8335 10.569c-2.1572-0.0051-5.5821-0.75496-8.6333 1.0717l4.5729-11.693z"
+                                    fill="#f2f2f2" stroke-width="1.1154" />
+                            </svg>
+                        </a></li>
+                    <li class="header__list-item"><a href="profile.html" aria-label="Перейти на страницу профиля">
+                            <svg width="512" height="512" version="1.1" viewBox="0 0 512 512"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g fill="#f2f2f2">
+                                    <path
+                                        d="m257.34 244.92a168.77 168.77 0 0 0-168.77 168.77 168.77 168.77 0 0 0 0.03125 0.44531h49.48a118.01 118.01 0 0 1 103.79-116.55 110.44 110.44 0 0 1 17.693-1.459 110.44 110.44 0 0 1 90.223 46.811 118.01 118.01 0 0 1 24.262 71.197h50.281v23.859a168.77 168.77 0 0 0 1.7812-24.305 168.77 168.77 0 0 0-168.77-168.77z" />
+                                    <path
+                                        d="m251.02 63.414a86.985 86.985 0 0 0-86.984 86.984 86.985 86.985 0 0 0 86.984 86.984 86.985 86.985 0 0 0 86.986-86.984 86.985 86.985 0 0 0-86.986-86.984zm1.2012 39.238a47.547 47.547 0 0 1 47.549 47.547 47.547 47.547 0 0 1-47.549 47.547 47.547 47.547 0 0 1-47.547-47.547 47.547 47.547 0 0 1 47.547-47.547z"
+                                        stroke-width="1.1357" />
+                                </g>
+                            </svg>
+                        </a></li>
+                    <li class="header__list-item"><a href="market.html" aria-label="Перейти на страницу магазина">
+                            <svg width="512" height="512" version="1.1" viewBox="0 0 512 512"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g fill="#f2f2f2">
+                                    <path transform="translate(0 -16.374)"
+                                        d="m53.111 146.16 49.879-0.0974a2.952 2.952 35.37 0 1 2.7945 1.9837l60.795 175.09a22.572 22.572 35.194 0 0 21.506 15.167l197.62-1.6002a8.0847 8.0847 142.18 0 0 7.7501-6.0156l4.7557-17.966a5.0559 5.0559 52.413 0 0-4.8876-6.3497h-190.35a5.1883 5.1883 33.787 0 1-4.796-3.209l-10.254-24.846 208.17-1.4749a15.668 15.668 142.58 0 0 14.982-11.461l26.226-94.094a10.042 10.042 52.744 0 0-9.6888-12.738l-279.77 0.42517-15.864-44.669a4.478 4.478 35.224 0 0-4.2198-2.9794l-73.656 1e-5a6.0104 6.0104 135 0 0-6.0104 6.0104l1e-6 23.818a5.0071 5.0071 44.944 0 0 5.0169 5.0071z" />
+                                    <circle cx="355.36" cy="363.92" r="33.844" />
+                                    <circle cx="206.5" cy="363.81" r="33.844" />
+                                </g>
+                            </svg>
+                        </a></li>
+                    <li class="header__list-item"><a href="achievements.html"
+                            aria-label="Перейти на страницу достижений">
+                            <svg width="512" height="512" version="1.1" viewBox="0 0 512 512"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g fill="#f2f2f2">
+                                    <path
+                                        d="m258.56 45.238a140.75 140.75 0 0 0-140.71 140.78 140.75 140.75 0 0 0 140.77 140.72 140.75 140.75 0 0 0 140.74-140.75v-0.0586a140.75 140.75 0 0 0-140.8-140.69zm1.4726 42.043a101.53 101.53 0 0 1 101.56 101.49v0.043a101.53 101.53 0 0 1-101.52 101.53 101.53 101.53 0 0 1-101.54-101.51 101.53 101.53 0 0 1 101.5-101.55z" />
+                                    <path transform="translate(-2.6719 -24.047)"
+                                        d="m175.08 317.84-2.7516 146.94a16.79 16.79 44.344 0 0 17.486 17.09l5.0118-0.20878a11.989 11.989 159.33 0 0 7.0389-2.6558l55.217-44.648a8.4575 8.4575 0.87494 0 1 10.834 0.16545l49.302 42.418a17.19 17.19 21.618 0 0 10.454 4.1426l3.4054 0.15031a16.068 16.068 136.33 0 0 16.777-16.017l0.33202-150.83-26.287 9.7521 1.8405 117.22a2.8498 2.8498 153.54 0 1-4.6031 2.291l-48.702-38.022a11.834 11.834 0.8028 0 0-14.301-0.20039l-49.865 36.729a2.547 2.547 27.11 0 1-4.0574-2.0772l1.1973-115.37z" />
+                                    <path transform="translate(62.344 46.312)"
+                                        d="m236.91 196.83-39.564-21.365-40.03 20.48 8.0937-44.23-31.847-31.742 44.566-5.9703 20.347-40.097 19.45 40.54 44.422 6.9605-32.546 31.026z" />
+                                </g>
+                            </svg>
+                        </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Ваши достижения</h1>
+            <p class="heading-text">
+                Вы можете сравнивать свои успехи с друзьями, выясняя, у кого из вас больше достижений.</p>
+            <div class="achievements">
+                <div class="achievements__item achievements__item--gained" id="0">
+                    <img src="imgs/achs/0.jpeg" alt="значок достижения">
+                    <p class="achievements__desc">Просмотреть достижения</p>
+                </div>
+                <div class="achievements__item" id="1">
+                    <img src="imgs/achs/1.jpeg" alt="значок достижения">
+                    <p class="achievements__desc">Выполнить 10 привычек</p>
+                </div>
+                <div class="achievements__item" id="2">
+                    <img src="imgs/achs/2.jpeg" alt="значок достижения">
+                    <p class="achievements__desc">Выполнить 50 привычек</p>
+                </div>
+                <div class="achievements__item" id="3">
+                    <img src="imgs/achs/3.jpeg" alt="значок достижения">
+                    <p class="achievements__desc">Выполнить 100 привычек</p>
+                </div>
+                <div class="achievements__item" id="4">
+                    <img src="imgs/achs/4.jpeg" alt="значок достижения">
+                    <p class="achievements__desc">Заходить 7 дней</p>
+                </div>
+                <div class="achievements__item" id="5">
+                    <img src="imgs/achs/5.jpeg" alt="значок достижения">
+                    <p class="achievements__desc">Заходить 30 дней</p>
+                </div>
+                <div class="achievements__item" id="6">
+                    <img src="imgs/achs/6.jpeg" alt="значок достижения">
+                    <p class="achievements__desc">Заходить 90 дней</p>
+                </div>
+                <div class="achievements__item" id="7">
+                    <img src="imgs/achs/7.jpeg" alt="значок достижения">
+                    <p class="achievements__desc">Создать 10 привычек</p>
+                </div>
+                <div class="achievements__item" id="8">
+                    <img src="imgs/achs/8.jpeg" alt="значок достижения">
+                    <p class="achievements__desc">Отметить привычку 30 раз</p>
+                </div>
+                <div class="achievements__item" id="9">
+                    <img src="imgs/achs/9.jpeg" alt="значок достижения">
+                    <p class="achievements__desc">Настроить имя</p>
+                </div>
+                <div class="achievements__item" id="10">
+                    <img src="imgs/achs/10.jpeg" alt="значок достижения">
+                    <p class="achievements__desc">Получить все аватарки</p>
+                </div>
+                <div class="achievements__item" id="11">
+                    <img src="imgs/achs/11.jpeg" alt="значок достижения">
+                    <p class="achievements__desc">Получить все темы</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

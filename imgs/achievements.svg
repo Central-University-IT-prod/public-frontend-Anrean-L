@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="512"
+   height="512"
+   version="1.1"
+   viewBox="0 0 512 512"
+   id="svg3"
+   sodipodi:docname="achievements.svg"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs3" />
+  <sodipodi:namedview
+     id="namedview3"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.5878906"
+     inkscape:cx="255.68512"
+     inkscape:cy="261.6679"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3" />
+  <g
+     fill="#f9f9f9"
+     id="g3"
+     style="fill:#f2f2f2">
+    <path
+       d="m258.56 45.238a140.75 140.75 0 0 0-140.71 140.78 140.75 140.75 0 0 0 140.77 140.72 140.75 140.75 0 0 0 140.74-140.75v-0.0586a140.75 140.75 0 0 0-140.8-140.69zm1.4726 42.043a101.53 101.53 0 0 1 101.56 101.49v0.043a101.53 101.53 0 0 1-101.52 101.53 101.53 101.53 0 0 1-101.54-101.51 101.53 101.53 0 0 1 101.5-101.55z"
+       id="path1"
+       style="fill:#f2f2f2" />
+    <path
+       transform="translate(-2.6719 -24.047)"
+       d="m175.08 317.84-2.7516 146.94a16.79 16.79 44.344 0 0 17.486 17.09l5.0118-0.20878a11.989 11.989 159.33 0 0 7.0389-2.6558l55.217-44.648a8.4575 8.4575 0.87494 0 1 10.834 0.16545l49.302 42.418a17.19 17.19 21.618 0 0 10.454 4.1426l3.4054 0.15031a16.068 16.068 136.33 0 0 16.777-16.017l0.33202-150.83-26.287 9.7521 1.8405 117.22a2.8498 2.8498 153.54 0 1-4.6031 2.291l-48.702-38.022a11.834 11.834 0.8028 0 0-14.301-0.20039l-49.865 36.729a2.547 2.547 27.11 0 1-4.0574-2.0772l1.1973-115.37z"
+       id="path2"
+       style="fill:#f2f2f2" />
+    <path
+       transform="translate(62.344 46.312)"
+       d="m236.91 196.83-39.564-21.365-40.03 20.48 8.0937-44.23-31.847-31.742 44.566-5.9703 20.347-40.097 19.45 40.54 44.422 6.9605-32.546 31.026z"
+       id="path3"
+       style="fill:#f2f2f2" />
+  </g>
+</svg>

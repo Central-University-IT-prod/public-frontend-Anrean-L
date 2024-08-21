@@ -1,0 +1,65 @@
+:root {
+    --dark-color: #9195f6;
+    --main-color: #B7C9F2;
+    --light-color: #f0f8ff;
+    --border-color: #838a8e;
+    --border-dark-color: #151719;
+    --dialogs-border-color: #4a5470;
+}
+
+:root[theme='fruits'] {
+    --dark-color: #c11867;
+    --main-color: #fbe66e;
+    --light-color: #FFFFFF;
+    --border-color: #838a8e;
+    --border-dark-color: #151719;
+    --dialogs-border-color: #4a5470;
+}
+
+:root[theme='sea'] {
+    --dark-color: #618f96;
+    --main-color: #AAD7D9;
+    --light-color: #FBF9F1;
+    --border-color: #838a8e;
+    --border-dark-color: #151719;
+    --dialogs-border-color: #4a5470;
+}
+
+:root[theme='anxiety'] {
+    --dark-color: #87A8D0;
+    --main-color: #C3B4D2;
+    --light-color: #FFFFFF;
+    --border-color: #838a8e;
+    --border-dark-color: #151719;
+    --dialogs-border-color: #4a5470;
+}
+
+:root[theme='night-sea'] {
+    --dark-color: #618f96;
+    --main-color: #AAD7D9;
+    --light-color: #222831;
+    --border-color: #838a8e;
+    --border-dark-color: #666e76;
+    --dialogs-border-color: #4a5470;
+    color-scheme: dark;
+}
+
+:root[theme='peer'] {
+    --dark-color: #F6B17A;
+    --main-color: #7077A1;
+    --light-color: #2D3250;
+    --border-color: #838a8e;
+    --border-dark-color: #dae0e5;
+    --dialogs-border-color: #4a5470;
+    color-scheme: dark;
+}
+
+:root[theme='wood'] {
+    --dark-color: #B85C38;
+    --main-color: #E0C097;
+    --light-color: #2D2424;
+    --border-color: #838a8e;
+    --border-dark-color: #dae0e5;
+    --dialogs-border-color: #5C3D2E;
+    color-scheme: dark;
+}

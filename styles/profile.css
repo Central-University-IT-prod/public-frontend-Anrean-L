@@ -1,0 +1,163 @@
+.header {
+    border-bottom: 1px solid var(--border-dark-color);
+}
+
+.profile-head {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding: 20px 0;
+}
+
+.profile-head .container {
+    display: flex;
+    gap: 20px;
+}
+
+.profile-head__image-wrapper {
+    text-align: center;
+    background-color: inherit;
+    border: 0;
+}
+
+.profile-head__image-wrapper img {
+    max-width: 280px;
+    border-radius: 20px;
+}
+
+.profile-head__content-wrapper {
+    padding-top: 20px;
+}
+
+.profile-head__name {
+    display: inline;
+}
+
+.profile-head__edit-name svg {
+    height: 30px;
+    width: 30px;
+}
+
+.profile-head__edit-name svg path,
+.profile-head__edit-name svg g {
+    fill: var(--light-color);
+}
+
+.profile-head__edit-name {
+    border: 0;
+    background-color: inherit;
+}
+
+.profile-head__edit {
+    transition: opacity .3s;
+    margin-top: 5px;
+}
+
+.profile-head__edit--closed {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.profile-head__name-input,
+.profile-head__name-apply,
+.profile-head__notifications {
+    border-radius: 5px;
+    border: 1px solid var(--border-dark-color);
+    padding: 5px;
+    display: inline;
+    font-family: inherit;
+    background-color: var(--light-color);
+}
+
+.profile-head__name-apply,
+.profile-head__notifications {
+    border: 1px solid var(--border-dark-color);
+}
+
+.profile-head__notifications {
+    margin-top: 10px;
+}
+
+.statistics {
+    padding-top: 20px;
+}
+
+.avatars__library {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.avatars__btn {
+    border: 0;
+    background-color: inherit;
+}
+
+.avatars img {
+    max-width: 150px;
+    border-radius: 20px;
+}
+
+.avatars__close {
+    display: block;
+    margin: 0 auto;
+    background-color: var(--dark-color);
+    border: 0;
+    color: var(--light-color);
+    border-radius: 10px;
+    padding: 10px 15px;
+}
+
+.avatars__btn--disabled {
+    position: relative;
+}
+
+.avatars__btn--disabled::after {
+    content: '';
+    background: 100% 100% url('../imgs/lock.png') no-repeat;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    display: block;
+    top: calc(50% - 15px);
+    left: calc(50% - 15px);
+}
+
+.ach {
+    text-align: center;
+}
+
+.ach img {
+    max-width: 280px;
+    border-radius: 10px;
+    display: block;
+    margin: 10px;
+}
+
+.ach__close {
+    display: block;
+    margin: 0 auto;
+    background-color: var(--dark-color);
+    border: 0;
+    color: var(--light-color);
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-family: inherit;
+}
+
+@media (max-width: 600px) {
+    .profile-head .container {
+        display: block;
+    }
+
+    .profile-head__image-wrapper {
+        width: 100%;
+    }
+
+    .avatars__library {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .avatars img {
+        max-width: 120px;
+    }
+}
